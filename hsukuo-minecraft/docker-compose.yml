@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  server:
+    image: itzg/minecraft-server:java21@sha256:06a047d7b62f5bf55a31ffc73f114d3fdafdf569cda5623eadf143d7f2f3c506
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      VERSION: "1.21.4"
+      SEED: "-5448382977646654394"
+      PLUGINS: |
+        https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot
+        https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
+    ports:
+      - 35565:25565
+      - 29132:19132/udp
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    restart: on-failure
+    stdin_open: true
+    tty: true

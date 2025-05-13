@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   server:
-    image: itzg/minecraft-server:java21@sha256:06a047d7b62f5bf55a31ffc73f114d3fdafdf569cda5623eadf143d7f2f3c506
+    image: itzg/minecraft-server:java21@sha256:8fb3173b88b7b4b6de5f15d035406b75c00eb6582853d4aced333964eafaef87
     environment:
       EULA: "TRUE"
       TYPE: "PAPER"
@@ -10,6 +10,7 @@ services:
       PLUGINS: |
         https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot
         https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
+        https://github.com/ViaVersion/ViaVersion/releases/download/5.3.2/ViaVersion-5.3.2.jar
     ports:
       - 35565:25565
       - 29132:19132/udp

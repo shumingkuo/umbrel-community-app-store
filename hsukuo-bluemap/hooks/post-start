@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+APP_DIR="$(dirname "${BASH_SOURCE[0]}")/.."
+
+sed -i 's/accept-download: false/accept-download: true/g' ${APP_DIR}/config/core.conf

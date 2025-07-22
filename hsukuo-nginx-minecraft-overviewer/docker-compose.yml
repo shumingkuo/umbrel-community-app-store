@@ -1,0 +1,8 @@
+services:
+  server:
+    image: arm64v8/nginx:1.29.0@sha256:3c8602860bf92781ed24a9e060f522b64f0087236ff6ccb5202bbaca39fd9bc9
+    ports:
+      - 35575:80
+    volumes:
+      - /data/minecraft-overviewer/html:/usr/share/nginx/html:ro
+    restart: on-failure

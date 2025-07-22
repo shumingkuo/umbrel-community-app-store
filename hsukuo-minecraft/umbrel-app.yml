@@ -20,6 +20,7 @@ description: >-
 
 
   Supports multiple Minecraft versions, plugins, and mods to enhance your gameplay.
+
 releaseNotes: >-
   - Initial release of the Minecraft Server for Umbrel OS.
 
@@ -28,6 +29,7 @@ releaseNotes: >-
   - Configuration options available via environment variables.
 
   - Seamless multiplayer experience for you and your friends.
+
 developer: Mojang AB
 website: https://www.minecraft.net
 dependencies: []

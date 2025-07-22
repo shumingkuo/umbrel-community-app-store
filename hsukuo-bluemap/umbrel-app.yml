@@ -12,10 +12,12 @@ description: >-
 
 
   Easily navigate through your world with an interactive, high-performance visualization.
+
 releaseNotes: >-
   - Improved rendering performance and map loading speed.
 
   - Enhanced compatibility with the latest Minecraft versions.
+
 developer: BlueMap
 website: https://bluemap.bluecolored.de
 dependencies:

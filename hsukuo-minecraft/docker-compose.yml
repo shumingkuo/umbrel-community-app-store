@@ -6,6 +6,9 @@ services:
       TYPE: "PAPER"
       VERSION: "1.21.8"
       SEED: "-5448382977646654394"
+      RCON_CMDS_STARTUP:  |-
+        /gamerule mobGriefing false
+        /gamerule keepInventory true
       PLUGINS: |
         https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot
         https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot

@@ -2,8 +2,8 @@ manifestVersion: 1.1
 id: hsukuo-nginx-minecraft-overviewer
 category: Game Tools
 name: Overviewer
-version: "2025.7.1"
-tagline: A 3D web-based map for your Minecraft world.
+version: "2025.10.1"
+tagline: A web-based map for your Minecraft world.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/refs/heads/main/hsukuo-nginx-minecraft-overviewer/nginx.svg
 description: >-
   Minecraft Overviewer is a high-resolution renderer for creating Google Maps-style maps of your Minecraft world.
@@ -19,8 +19,6 @@ releaseNotes: >-
 
 developer: Minecraft Overviewer
 website: https://overviewer.org
-dependencies:
-  - hsukuo-minecraft
 repo: https://github.com/overviewer/Minecraft-Overviewer
 support: https://github.com/overviewer/Minecraft-Overviewer/issues
 port: 35575

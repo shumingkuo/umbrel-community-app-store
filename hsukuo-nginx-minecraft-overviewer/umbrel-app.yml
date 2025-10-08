@@ -4,7 +4,7 @@ category: Game Tools
 name: Overviewer
 version: "2025.10.4"
 tagline: A web-based map for your Minecraft world.
-icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/refs/heads/main/hsukuo-nginx-minecraft-overviewer/ov.svg
+icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/refs/heads/main/hsukuo-nginx-minecraft-overviewer/nginx.svg
 description: >-
   Minecraft Overviewer is a high-resolution renderer for creating Google Maps-style maps of your Minecraft world.
 

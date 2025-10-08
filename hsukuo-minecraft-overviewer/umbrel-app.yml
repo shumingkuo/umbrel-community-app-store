@@ -1,10 +1,10 @@
 manifestVersion: 1.1
-id: hsukuo-minecraft-overviewer-genpoi
+id: hsukuo-minecraft-overviewer
 category: Game Tools
-name: OV POI
+name: OV
 version: "2025.10.1"
 tagline: A web-based map for your Minecraft world.
-icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/refs/heads/main/hsukuo-minecraft-overviewer-genpoi/ov.svg
+icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/refs/heads/main/hsukuo-minecraft-overviewer/ov.svg
 description: >-
   Minecraft Overviewer is a high-resolution renderer for creating Google Maps-style maps of your Minecraft world.
 

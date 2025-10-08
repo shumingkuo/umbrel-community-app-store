@@ -1,0 +1,8 @@
+services:
+  server:
+    image: shuming0715/minecraft-overviewer:v2025.03.27@sha256:f7e355c15828280420e20bbbf8040f35abb867583aac4b85d970806514846eec
+    command: -c /usr/overviewer/config.py --genpoi
+    volumes:
+      - ${UMBREL_ROOT}/app-data/hsukuo-nginx-minecraft-overviewer/html:/usr/overviewer/output:rw
+      - ${UMBREL_ROOT}/app-data/hsukuo-minecraft/data:/usr/overviewer/server:ro
+      - ${UMBREL_ROOT}/app-data/hsukuo-minecraft/data/overviewer-config.py:/usr/overviewer/config.py:ro

@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: hsukuo-minecraft-overviewer-genpoi
 category: Game Tools
 name: OV POI
-version: "2025.10.1"
+version: "2025.10.2"
 tagline: A web-based map for your Minecraft world.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/refs/heads/main/hsukuo-minecraft-overviewer-genpoi/ov.svg
 description: >-

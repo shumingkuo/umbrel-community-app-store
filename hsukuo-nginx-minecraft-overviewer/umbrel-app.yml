@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: hsukuo-nginx-minecraft-overviewer
 category: Game Tools
 name: Overviewer
-version: "2025.10.3"
+version: "2025.10.4"
 tagline: A web-based map for your Minecraft world.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/refs/heads/main/hsukuo-nginx-minecraft-overviewer/ov.svg
 description: >-

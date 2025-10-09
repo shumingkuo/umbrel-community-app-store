@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: hsukuo-minecraft
 category: Game
 name: Minecraft
-version: "2025.10.1"
+version: "2025.10.2"
 tagline: Run a Minecraft server and play with friends anytime, anywhere.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/refs/heads/main/hsukuo-minecraft/minecraft.svg
 description: >-

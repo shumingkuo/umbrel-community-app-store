@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: hsukuo-bluemap
 category: Game Tools
 name: BlueMap
-version: "2025.7.1"
+version: "2025.12.1"
 tagline: A 3D web-based map for your Minecraft world.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/refs/heads/main/hsukuo-bluemap/bluemap.svg
 description: >-

@@ -1,6 +1,6 @@
 services:
   server:
-    image: ghcr.io/bluemap-minecraft/bluemap:v5.9@sha256:6bd8b50121734a6c44c5ee635d223fb3b3a53cc564ba995a64cd0eb6e09f91f9
+    image: ghcr.io/bluemap-minecraft/bluemap:v5.15@sha256:79113006811c3e9e8549d66d9e02be5a244b10c988a72aa41e7c174898f838a4
     command: -r -u -w
     ports:
       - 18100:8100

@@ -9,9 +9,8 @@ services:
       - '--web.enable-lifecycle'
       - '--web.enable-admin-api'
       - '--web.listen-address=:9090'
-      - '--web.config.file=/etc/prometheus/web.yml'
     ports:
-      - 9090:9090
+      - 19090:9090
     volumes:
       - ${APP_DATA_DIR}/config/prometheus.yml:/etc/prometheus/prometheus.yml
       - ${APP_DATA_DIR}/data:/prometheus

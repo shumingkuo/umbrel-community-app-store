@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: hsukuo-node-exporter
 category: Monitoring
 name: Node exporter
-version: "2026.2.3"
+version: "2026.2.4"
 tagline: Prometheus exporter.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-node-exporter/logo.svg
 description: >-
@@ -16,6 +16,7 @@ website: https://prometheus.io
 dependencies: []
 repo: https://github.com/prometheus/node_exporter
 support: https://github.com/prometheus/node_exporter/issues
+port: 9100
 gallery: []
 path: ""
 defaultUsername: ""

@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: hsukuo-prometheus
 category: Monitoring
 name: Prometheus
-version: "2026.2.3"
+version: "2026.2.4"
 tagline: Prometheus.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-prometheus/logo.svg
 description: >-

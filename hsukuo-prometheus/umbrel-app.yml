@@ -1,0 +1,27 @@
+manifestVersion: 1.1
+id: hsukuo-prometheus
+category: Monitoring
+name: Prometheus
+version: "2026.2.1"
+tagline: Prometheus.
+icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-prometheus/logo.svg
+description: >-
+  Prometheus, a Cloud Native Computing Foundation project, is a systems and service monitoring system.
+
+  It collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts when specified conditions are observed.
+
+releaseNotes: >-
+  - First version.
+
+developer: Prometheus
+website: https://prometheus.io
+dependencies: []
+repo: https://github.com/prometheus/prometheus
+support: https://github.com/prometheus/prometheus/issues
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
+submitter: ShuMing Kuo
+submission: https://github.com/shumingkuo/umbrel-community-app-store

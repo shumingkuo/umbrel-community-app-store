@@ -1,0 +1,17 @@
+services:
+  prometheus:
+    image: prom/prometheus:v3.5.1@sha256:38c3b05c3bc744ff1b0b7b4eb82196026442845e62a1e2073795565da506d7a2
+    restart: unless-stopped
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=365d'
+      - '--web.enable-lifecycle'
+      - '--web.enable-admin-api'
+      - '--web.listen-address=:9090'
+      - '--web.config.file=/etc/prometheus/web.yml'
+    ports:
+      - 9090:9090
+    volumes:
+      - ${APP_DATA_DIR}/config/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ${APP_DATA_DIR}/data:/prometheus

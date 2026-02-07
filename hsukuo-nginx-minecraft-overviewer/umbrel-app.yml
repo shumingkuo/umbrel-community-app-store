@@ -1,8 +1,8 @@
 manifestVersion: 1.1
 id: hsukuo-nginx-minecraft-overviewer
-category: Website
-name: Nginx
-version: "2026.2.1"
+category: Game Tools
+name: Overviewer
+version: "2026.2.2"
 tagline: A web-based map for your Minecraft world.
 tagline: Nginx proxy to minecraft overviewer web.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-nginx-minecraft-overviewer/logo.svg

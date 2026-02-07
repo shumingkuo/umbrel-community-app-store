@@ -2,9 +2,9 @@ manifestVersion: 1.1
 id: hsukuo-node-exporter
 category: Monitoring
 name: node_exporter
-version: "2026.2.1"
+version: "2026.2.2"
 tagline: Prometheus exporter.
-icon: h https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-node-exporter/logo.svg
+icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-node-exporter/logo.svg
 description: >-
   Prometheus exporter for hardware and OS metrics exposed by *NIX kernels, written in Go with pluggable metric collectors.
 
@@ -16,7 +16,6 @@ website: https://prometheus.io/
 dependencies: []
 repo: https://github.com/prometheus/node_exporter
 support: https://github.com/prometheus/node_exporter/issues
-port: 19090
 gallery: []
 path: ""
 defaultUsername: ""

@@ -2,9 +2,9 @@ manifestVersion: 1.1
 id: hsukuo-minecraft-overviewer
 category: Game Tools
 name: OV
-version: "2025.10.2"
+version: "2026.2.1"
 tagline: A web-based map for your Minecraft world.
-icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/refs/heads/main/hsukuo-minecraft-overviewer/ov.svg
+icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-minecraft-overviewer/logo.svg
 description: >-
   Minecraft Overviewer is a high-resolution renderer for creating Google Maps-style maps of your Minecraft world.
 

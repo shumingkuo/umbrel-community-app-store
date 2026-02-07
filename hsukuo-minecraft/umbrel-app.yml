@@ -2,9 +2,9 @@ manifestVersion: 1.1
 id: hsukuo-minecraft
 category: Game
 name: Minecraft
-version: "2025.12.1"
+version: "2026.2.1"
 tagline: Run a Minecraft server and play with friends anytime, anywhere.
-icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/refs/heads/main/hsukuo-minecraft/minecraft.svg
+icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-minecraft/logo.svg
 description: >-
   Minecraft is a popular sandbox game that lets players build and explore infinite worlds.
 
@@ -34,7 +34,7 @@ developer: Mojang AB
 website: https://www.minecraft.net
 dependencies: []
 repo: https://github.com/mojang
-support: https://github.com/itzg/docker-minecraft-server
+support: https://github.com/itzg/docker-minecraft-server/issues
 gallery:
   -
 path: ""

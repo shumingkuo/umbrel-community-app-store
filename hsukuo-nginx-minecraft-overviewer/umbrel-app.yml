@@ -1,27 +1,23 @@
 manifestVersion: 1.1
 id: hsukuo-nginx-minecraft-overviewer
-category: Game Tools
-name: Overviewer
-version: "2025.10.4"
+category: Website
+name: Nginx
+version: "2026.2.1"
 tagline: A web-based map for your Minecraft world.
-icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/refs/heads/main/hsukuo-nginx-minecraft-overviewer/nginx.svg
+tagline: Nginx proxy to minecraft overviewer web.
+icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-nginx-minecraft-overviewer/logo.svg
 description: >-
-  Minecraft Overviewer is a high-resolution renderer for creating Google Maps-style maps of your Minecraft world.
-
+  NGINX (pronounced "engine x" or "en-jin-eks") is the world's most popular Web Server, high performance Load Balancer, Reverse Proxy, API Gateway and Content Cache.
   It generates a static map of your world that can be viewed in any web browser.
 
-  Perfect for sharing your server world with friends or the public.
-
 releaseNotes: >-
-  - Updated to latest Overviewer version with improved tile generation.
+  - First version.
 
-  - Better world rendering compatibility for Minecraft 1.21+.
-
-developer: Minecraft Overviewer
-website: https://overviewer.org
+developer: NGINX
+website: https://nginx.org
 dependencies: []
-repo: https://github.com/overviewer/Minecraft-Overviewer
-support: https://github.com/overviewer/Minecraft-Overviewer/issues
+repo: https://github.com/nginx/docker-nginx
+support: https://github.com/nginx/docker-nginx/issues
 port: 35575
 gallery: []
 path: ""

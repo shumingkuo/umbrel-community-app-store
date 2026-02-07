@@ -1,6 +1,7 @@
 services:
   server:
     image: ghcr.io/bluemap-minecraft/bluemap:v5.15@sha256:79113006811c3e9e8549d66d9e02be5a244b10c988a72aa41e7c174898f838a4
+    restart: on-failure
     command: -r -u -w
     ports:
       - 18100:8100
@@ -9,6 +10,5 @@ services:
       - ${APP_DATA_DIR}/data:/app/data
       - ${APP_DATA_DIR}/web:/app/web
       - ${UMBREL_ROOT}/app-data/hsukuo-minecraft/data/world:/app/world
-      - ${UMBREL_ROOT}/app-data/hsukuo-minecraft/data/world/DIM-1:/world_nether
-      - ${UMBREL_ROOT}/app-data/hsukuo-minecraft/data/world/DIM1:/world_the_end
-    restart: on-failure
+      - ${UMBREL_ROOT}/app-data/hsukuo-minecraft/data/world_nether:/app/world_nether
+      - ${UMBREL_ROOT}/app-data/hsukuo-minecraft/data/world_the_end:/app/world_the_end

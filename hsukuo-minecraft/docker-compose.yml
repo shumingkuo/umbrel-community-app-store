@@ -2,6 +2,7 @@ services:
   server:
     image: itzg/minecraft-server:java21@sha256:40f9b9b6e64589a90ddfce3062b3b2f207d59fa1ecd588c2b57c2e04e4500c20
     restart: on-failure
+    user: '1000:1000'
     environment:
       EULA: "TRUE"
       TYPE: "PAPER"

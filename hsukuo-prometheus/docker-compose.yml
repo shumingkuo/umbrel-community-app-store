@@ -2,7 +2,7 @@ services:
   prometheus:
     image: prom/prometheus:v3.5.1@sha256:38c3b05c3bc744ff1b0b7b4eb82196026442845e62a1e2073795565da506d7a2
     restart: unless-stopped
-    user: "1000:1000"
+    user: '1000:1000'
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'

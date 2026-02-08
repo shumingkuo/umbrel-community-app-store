@@ -1,6 +1,7 @@
 services:
   server:
     image: shuming0715/minecraft-overviewer:v2025.03.27@sha256:f7e355c15828280420e20bbbf8040f35abb867583aac4b85d970806514846eec
+    user: '1000:1000'
     command: -c /usr/overviewer/config.py
     volumes:
       - ${UMBREL_ROOT}/app-data/hsukuo-nginx-minecraft-overviewer/html:/usr/overviewer/output:rw

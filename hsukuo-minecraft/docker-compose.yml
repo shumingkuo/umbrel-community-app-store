@@ -6,7 +6,7 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: "PAPER"
-      VERSION: "1.21.10"
+      VERSION: "26.2"
       SEED: "-5448382977646654394"
       RCON_CMDS_STARTUP:  |-
         /gamerule mobGriefing false

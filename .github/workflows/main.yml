@@ -108,7 +108,7 @@ jobs:
           PR_NUMBER="$(gh pr view "minecraft-update-${{ github.run_id }}" --json number --jq .number)"
           echo "PR_NUMBER=${PR_NUMBER}" >> ${GITHUB_ENV}
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKENS }}
           TITLE_FILE: ${{ runner.temp }}/minecraft-pr-title
           BODY_FILE: ${{ runner.temp }}/minecraft-pr-body
       - name: Enable auto-merge
@@ -118,4 +118,4 @@ jobs:
             --auto \
             --squash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKENS }}

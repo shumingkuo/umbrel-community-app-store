@@ -1,0 +1,13 @@
+name: schedule_update-minecraft-server
+run-name: '[Schedule] Update Minecraft Server'
+
+on:
+  workflow_call:
+  schedule:
+    - cron: '0 7 * * *'
+      timezone: "Asia/Taipei"
+
+jobs:
+  main:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit

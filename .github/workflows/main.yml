@@ -1,0 +1,121 @@
+name: Update Minecraft Server
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.ref_name }}_${{ github.workflow }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    if: |
+      !cancelled()
+    defaults:
+      run:
+        working-directory: ${{ github.ref_name }}
+    steps:
+      - name: clean-up-resources-initialization
+        run: 'rm -rf "${{ github.ref_name }}" && mkdir -p "${{ github.ref_name }}"'
+        working-directory: ${{ github.workspace }}
+      - name: environment-variables
+        run: env | sort
+      - name: checkout-the-repo
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            .github/scripts/update_minecraft_server.py
+            hsukuo-minecraft/docker-compose.yml
+            hsukuo-minecraft/umbrel-app.yml
+          sparse-checkout-cone-mode: false
+          path: ${{ github.ref_name }}
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      - name: Run updater
+        run: |
+          python .github/scripts/update_minecraft_server.py
+        env:
+          APP_DIR: hsukuo-minecraft
+      - name: Check for tracked changes
+        id: git-check
+        run: |
+          echo "--- git status --short ---"
+          git status --short
+
+          echo "--- tracked changes only ---"
+          git status --porcelain --untracked-files=no
+
+          if [ -n "$(git status --porcelain --untracked-files=no)" ]; then
+            echo "CHANGED=true" >> ${GITHUB_ENV}
+          else
+            echo "CHANGED=false" >> ${GITHUB_ENV}
+          fi
+      - name: Read updater outputs
+        if: env.CHANGED == 'true'
+        run: |
+          printf 'PR_TITLE<<END\n' >> ${GITHUB_ENV}
+          cat "${{ env.TITLE_FILE }}" >> ${GITHUB_ENV}
+          printf '\nEND\n' >> ${GITHUB_ENV}
+
+          printf 'PR_BODY<<END\n' >> ${GITHUB_ENV}
+          cat "${{ env.BODY_FILE }}" >> ${GITHUB_ENV}
+          printf '\nEND\n' >> ${GITHUB_ENV}
+        env:
+          TITLE_FILE: ${{ runner.temp }}/minecraft-pr-title
+          BODY_FILE: ${{ runner.temp }}/minecraft-pr-body
+      - name: Cat PR title and body
+        if: env.CHANGED == 'true'
+        run: |
+          echo "--- minecraft-pr-title ---"
+          cat "${{ runner.temp }}/minecraft-pr-title"
+
+          echo "--- minecraft-pr-body ---"
+          cat "${{ runner.temp }}/minecraft-pr-body"
+      - name: Commit and push branch
+        if: env.CHANGED == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout -b "minecraft-update-${{ github.run_id }}"
+          git add hsukuo-minecraft/docker-compose.yml hsukuo-minecraft/umbrel-app.yml
+          git commit -m "${{ env.PR_TITLE }}"
+          git push origin "minecraft-update-${{ github.run_id }}"
+      - name: Create Pull Request
+        if: env.CHANGED == 'true'
+        run: |
+          PR_TITLE="$(cat "${{ env.TITLE_FILE }}")"
+
+          gh pr create \
+            --base main \
+            --head "minecraft-update-${{ github.run_id }}" \
+            --title "$PR_TITLE" \
+            --body-file "${{ env.BODY_FILE }}"
+
+          PR_NUMBER="$(gh pr view "minecraft-update-${{ github.run_id }}" --json number --jq .number)"
+          echo "PR_NUMBER=${PR_NUMBER}" >> ${GITHUB_ENV}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE_FILE: ${{ runner.temp }}/minecraft-pr-title
+          BODY_FILE: ${{ runner.temp }}/minecraft-pr-body
+      - name: Enable auto-merge
+        if: env.CHANGED == 'true' && env.PR_NUMBER != ''
+        run: |
+          gh pr merge "minecraft-update-${{ github.run_id }}" \
+            --auto \
+            --squash
+        env:
+          GH_TOKEN: ${{ github.token }}

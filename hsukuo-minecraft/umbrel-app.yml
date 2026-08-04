@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: hsukuo-minecraft
 category: Game
 name: Minecraft
-version: "2026.7.2"
+version: "2026.8.0"
 tagline: Run a Minecraft server and play with friends anytime, anywhere.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-minecraft/logo.svg
 description: >-
@@ -22,14 +22,11 @@ description: >-
   Supports multiple Minecraft versions, plugins, and mods to enhance your gameplay.
 
 releaseNotes: >-
-  - Initial release of the Minecraft Server for Umbrel OS.
-
-  - Based on Itzg’s Docker Minecraft Server for easy setup and customization.
-
-  - Configuration options available via environment variables.
-
-  - Seamless multiplayer experience for you and your friends.
-
+  This update includes:
+    - Update ViaVersion plugin from 5.9.1 to 5.11.0
+    - Refresh `itzg/minecraft-server:java25` image digest
+    - Previous digest: `sha256:d838746d4c3c6160864023dca77c89a06afcdc6f007f58d4367bbca3917310e2`
+    - New digest: `sha256:c584b2f521e2b9b7b3c46cc8f43fac5a4f630e99e134a744dfa247d456ab5824`
 developer: Mojang AB
 website: https://www.minecraft.net
 dependencies: []

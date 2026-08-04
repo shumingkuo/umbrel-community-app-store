@@ -1,6 +1,6 @@
 services:
   server:
-    image: itzg/minecraft-server:java25@sha256:d838746d4c3c6160864023dca77c89a06afcdc6f007f58d4367bbca3917310e2
+    image: itzg/minecraft-server:java25@sha256:c584b2f521e2b9b7b3c46cc8f43fac5a4f630e99e134a744dfa247d456ab5824
     restart: on-failure
     user: '1000:1000'
     environment:
@@ -14,7 +14,7 @@ services:
       PLUGINS: |
         https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot
         https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
-        https://github.com/ViaVersion/ViaVersion/releases/download/5.9.1/ViaVersion-5.9.1.jar
+        https://github.com/ViaVersion/ViaVersion/releases/download/5.11.0/ViaVersion-5.11.0.jar
     ports:
       - 35565:25565
       - 29132:19132/udp

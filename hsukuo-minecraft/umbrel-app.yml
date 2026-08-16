@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: hsukuo-minecraft
 category: Game
 name: Minecraft
-version: "2026.8.6"
+version: "2026.8.7"
 tagline: Run a Minecraft server and play with friends anytime, anywhere.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-minecraft/logo.svg
 description: >-
@@ -24,8 +24,8 @@ description: >-
 releaseNotes: >-
   This update includes:
     - Refresh `itzg/minecraft-server:java25` image digest
-    - Previous digest: `sha256:bf0ca4aad9cf56c6c59cfb4087cd5e0fea4957a0ff989119a504f9abc80fb6ee`
-    - New digest: `sha256:2fe790e54fc0138ab9f011b38473c11161984b911d32ebfd6877f7411f736937`
+    - Previous digest: `sha256:2fe790e54fc0138ab9f011b38473c11161984b911d32ebfd6877f7411f736937`
+    - New digest: `sha256:b6e04266314e2cb462c1781cf938d3924343cef3859db4cd895509949c98238a`
 developer: Mojang AB
 website: https://www.minecraft.net
 dependencies: []

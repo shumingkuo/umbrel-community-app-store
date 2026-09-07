@@ -4,7 +4,7 @@ run-name: '[Schedule] Update Minecraft Server'
 on:
   workflow_call:
   schedule:
-    - cron: '0 7 * * *'
+    - cron: '0 7 * * 1'
       timezone: "Asia/Taipei"
 
 permissions:

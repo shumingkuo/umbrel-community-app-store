@@ -1,12 +1,12 @@
 services:
   server:
-    image: itzg/minecraft-server:java25@sha256:769a826c340586e9d483a0eb6437b8e2c3611aea6a115ff072a2fe372d43e2be
+    image: itzg/minecraft-server:java25@sha256:77280d10744fd0482b7c510cd6b7ba7a5a609be5ef91cd593374e7df36de826b
     restart: on-failure
     user: '1000:1000'
     environment:
       EULA: "TRUE"
       TYPE: "PAPER"
-      VERSION: "26.2"
+      VERSION: "26.3"
       SEED: "-5448382977646654394"
       RCON_CMDS_STARTUP:  |-
         /gamerule mobGriefing false
@@ -14,7 +14,7 @@ services:
       PLUGINS: |
         https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot
         https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
-        https://github.com/ViaVersion/ViaVersion/releases/download/5.11.0/ViaVersion-5.11.0.jar
+        https://github.com/ViaVersion/ViaVersion/releases/download/5.12.0/ViaVersion-5.12.0.jar
     ports:
       - 35565:25565
       - 29132:19132/udp

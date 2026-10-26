@@ -1,5 +1,22 @@
 #!/usr/bin/env bash
 
-APP_DIR="$(dirname "${BASH_SOURCE[0]}")/.."
+APP_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+CONFIG_FILE="${APP_DIR}/config/core.conf"
 
-sed -i 's/accept-download: false/accept-download: true/g' ${APP_DIR}/config/core.conf
+for _ in $(seq 1 120); do
+  [[ -f "${CONFIG_FILE}" ]] && break
+  sleep 1
+done
+
+if [[ ! -f "${CONFIG_FILE}" ]]; then
+  echo "[post-start] core.conf not found, skip"
+  exit 0
+fi
+
+if grep -Eq '^[[:space:]]*accept-download[[:space:]]*:' "${CONFIG_FILE}"; then
+  sed -i -E 's/^[[:space:]]*accept-download[[:space:]]*:.*/accept-download: true/' "${CONFIG_FILE}"
+else
+  printf '\naccept-download: true\n' >> "${CONFIG_FILE}"
+fi
+
+echo "[post-start] accept-download set to true"

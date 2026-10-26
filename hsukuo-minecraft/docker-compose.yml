@@ -1,6 +1,6 @@
 services:
   server:
-    image: itzg/minecraft-server:java25@sha256:e02138323fb1bd9bac652db8add563deb109cfb36c363cdbc948bdaf0a33df00
+    image: itzg/minecraft-server:java25@sha256:0501cb2609925a658432eb31b4a64452c3f37761893f5873ec60df80c91e434e
     restart: on-failure
     user: '1000:1000'
     environment:

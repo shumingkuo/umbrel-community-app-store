@@ -9,6 +9,12 @@ scrape_configs:
       - targets:
           - 192.168.1.11:9100
         labels:
-          instance_name: "umbrel"
+          instance_name: "umbrel1"
           private_ip: "192.168.1.11"
+          region: "local"
+      - targets:
+          - 192.168.1.12:9100
+        labels:
+          instance_name: "umbrel2"
+          private_ip: "192.168.1.12"
           region: "local"

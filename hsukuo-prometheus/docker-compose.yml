@@ -1,6 +1,6 @@
 services:
   prometheus:
-    image: prom/prometheus:v3.15.1@sha256:d445d1806b38f85b5c394a1b87f94113fde0473b45245922c2e8b1bd41fa68ae
+    image: prom/prometheus:v3.15.1@sha256:fa3302279710be2f21a8301ec17a8b4f2301fd829bd113839b3b6b02b6f191a2
     restart: unless-stopped
     user: '1000:1000'
     command:

@@ -1,8 +1,10 @@
-manifestVersion: 1.1
+manifestVersion: 2.0
 id: hsukuo-minecraft
+storage:
+  dataRoot: data
 category: Game
 name: Minecraft
-version: "2026.11.2"
+version: "2026.11.3"
 tagline: Run a Minecraft server and play with friends anytime, anywhere.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-minecraft/logo.svg
 description: >-
@@ -23,9 +25,7 @@ description: >-
 
 releaseNotes: >-
   This update includes:
-    - Refresh `itzg/minecraft-server:java25` image digest
-    - Previous digest: `sha256:f7f2222512810f0f0e85133913622cf639be77a5dd1d4b11f24ab675da6ba742`
-    - New digest: `sha256:2cf487c4be818b45197fe3d7c1c8b397e1a1404c9bbab7aaa2021c9c80723fe1`
+    - Adds umbrelOS 2.0 storage management support for the Minecraft world data.
 developer: Mojang AB
 website: https://www.minecraft.net
 dependencies: []

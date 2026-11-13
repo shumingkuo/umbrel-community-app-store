@@ -1,8 +1,8 @@
-manifestVersion: 1.1
+manifestVersion: 2.0
 id: hsukuo-nginx-minecraft-overviewer
 category: Game Tools
 name: Overviewer
-version: "2026.2.2"
+version: "2026.11.0"
 tagline: A web-based map for your Minecraft world.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-nginx-minecraft-overviewer/logo.svg
 description: >-
@@ -13,9 +13,7 @@ description: >-
   Perfect for sharing your server world with friends or the public.
 
 releaseNotes: >-
-  - Updated to latest Overviewer version with improved tile generation.
-
-  - Better world rendering compatibility for Minecraft 1.21+.
+  - Routes the map web interface through the Umbrel app proxy.
 
 developer: Minecraft Overviewer
 website: https://overviewer.org

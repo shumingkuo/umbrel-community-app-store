@@ -1,4 +1,4 @@
-manifestVersion: 1.1
+manifestVersion: 2.0
 id: hsukuo-node-exporter
 category: Monitoring
 name: Node exporter

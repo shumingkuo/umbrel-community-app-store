@@ -1,8 +1,8 @@
-manifestVersion: 1.1
+manifestVersion: 2.0
 id: hsukuo-prometheus
 category: Monitoring
 name: Prometheus
-version: "2026.11.2"
+version: "2026.11.3"
 tagline: Prometheus.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-prometheus/logo.svg
 description: >-
@@ -11,7 +11,7 @@ description: >-
   It collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts when specified conditions are observed.
 
 releaseNotes: >-
-  - First version.
+  - Adds umbrelOS 2.0 storage management support and routes the web interface through the Umbrel app proxy.
 
 developer: Prometheus
 website: https://prometheus.io

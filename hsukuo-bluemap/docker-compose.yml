@@ -1,11 +1,14 @@
 services:
+  app_proxy:
+    environment:
+      APP_HOST: hsukuo-bluemap_server_1
+      APP_PORT: 8100
+
   server:
     image: ghcr.io/bluemap-minecraft/bluemap:v5.29@sha256:bb49bfdef996c6fd9cf68c8c6a2b79189e6711fa90ae4d43cf22d81a6811301e
     restart: on-failure
     user: '1000:1000'
     command: -r -u -w
-    ports:
-      - 18100:8100
     volumes:
       - ${APP_DATA_DIR}/config:/app/config
       - ${APP_DATA_DIR}/data:/app/data

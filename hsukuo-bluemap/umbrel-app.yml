@@ -1,8 +1,10 @@
-manifestVersion: 1.1
+manifestVersion: 2.0
 id: hsukuo-bluemap
+storage:
+  dataRoot: data
 category: Game Tools
 name: BlueMap
-version: "2026.10.0"
+version: "2026.11.1"
 tagline: A 3D web-based map for your Minecraft world.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-bluemap/logo.svg
 description: >-
@@ -14,9 +16,7 @@ description: >-
   Easily navigate through your world with an interactive, high-performance visualization.
 
 releaseNotes: >-
-  - Improved rendering performance and map loading speed.
-
-  - Enhanced compatibility with the latest Minecraft versions.
+  - Adds umbrelOS 2.0 storage management support and routes the web interface through the Umbrel app proxy.
 
 developer: BlueMap
 website: https://bluemap.bluecolored.de

@@ -1,4 +1,9 @@
 services:
+  app_proxy:
+    environment:
+      APP_HOST: hsukuo-prometheus_prometheus_1
+      APP_PORT: 9090
+
   prometheus:
     image: prom/prometheus:v3.15.1@sha256:fa3302279710be2f21a8301ec17a8b4f2301fd829bd113839b3b6b02b6f191a2
     restart: unless-stopped
@@ -10,8 +15,6 @@ services:
       - '--web.enable-lifecycle'
       - '--web.enable-admin-api'
       - '--web.listen-address=:9090'
-    ports:
-      - 19090:9090
     volumes:
       - ${APP_DATA_DIR}/config/prometheus.yml:/etc/prometheus/prometheus.yml
       - ${APP_DATA_DIR}/data:/prometheus

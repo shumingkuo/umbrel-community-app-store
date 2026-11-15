@@ -13,4 +13,4 @@ services:
       - ${APP_DATA_DIR}/config:/app/config
       - ${APP_DATA_DIR}/data:/app/data
       - ${APP_DATA_DIR}/web:/app/web
-      - ${UMBREL_ROOT}/app-data/hsukuo-minecraft/data/world:/app/world
+      # - ${UMBREL_ROOT}/app-data/hsukuo-minecraft/data/world:/app/world

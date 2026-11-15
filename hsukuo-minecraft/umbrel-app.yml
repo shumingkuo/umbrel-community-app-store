@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: Game
 name: Minecraft
-version: "2026.11.3"
+version: "2026.11.4"
 tagline: Run a Minecraft server and play with friends anytime, anywhere.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-minecraft/logo.svg
 description: >-

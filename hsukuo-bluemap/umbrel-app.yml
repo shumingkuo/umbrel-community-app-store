@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: Game Tools
 name: BlueMap
-version: "2026.11.1"
+version: "2026.11.2"
 tagline: A 3D web-based map for your Minecraft world.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-bluemap/logo.svg
 description: >-

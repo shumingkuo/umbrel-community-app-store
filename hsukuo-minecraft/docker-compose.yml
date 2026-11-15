@@ -19,7 +19,7 @@ services:
       - 35565:25565/tcp
       - 29132:19132/tcp
       - 29132:19132/udp
-    volumes:
-      - ${APP_DATA_DIR}/data:/data
+    # volumes:
+    #   - ${APP_DATA_DIR}/data:/data
     stdin_open: true
     tty: true

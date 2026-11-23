@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: Game
 name: Minecraft
-version: "2026.11.5"
+version: "2026.11.6"
 tagline: Run a Minecraft server and play with friends anytime, anywhere.
 icon: https://raw.githubusercontent.com/shumingkuo/umbrel-community-app-store/main/hsukuo-minecraft/logo.svg
 description: >-
@@ -26,8 +26,8 @@ description: >-
 releaseNotes: >-
   This update includes:
     - Refresh `itzg/minecraft-server:java25` image digest
-    - Previous digest: `sha256:2cf487c4be818b45197fe3d7c1c8b397e1a1404c9bbab7aaa2021c9c80723fe1`
-    - New digest: `sha256:e528e38848e1456d683a60c624ce2b1a5ae15d1b221d368108fa05853388285a`
+    - Previous digest: `sha256:e528e38848e1456d683a60c624ce2b1a5ae15d1b221d368108fa05853388285a`
+    - New digest: `sha256:dc15f05423064860968043de873316dbd0c027a7d9c8354826229d7c20dd4619`
 developer: Mojang AB
 website: https://www.minecraft.net
 dependencies: []
